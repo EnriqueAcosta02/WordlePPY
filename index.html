@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <div>
     <title>Wordle PPY</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div>
+      <div id="boardScore"></div>
       <h1>Wordle PPY</h1>
-      <input type="text" id="guess-input">
-      <button id="guess-button">Intentar</button>
-      <button id="reset-button">Reiniciar</button>
-      <button id="give-up-button">Rendirse</button>
+      <p id="wordAlert">Intenta adivinar la palabra secreta.Tienes 5 intentos</p>
+      <div id="word" class="row"></div>
+      <input type="text" id="guess-input" maxlength="5" placeholder="Ingrese la palabra.">
+      <p>⚠️Las palabras deben contener solo 5 letras.</p>
+      <button id="guess-button" class="button">Intentar</button>
+      <button id="reset-button" class="button">Siguiente</button>
+      <button id="help-button" class="button">Ayuda</button>
+      <button id="give-up-button" class="button">Rendirse</button>
+      <div id="winning-message" class="hiddenWinning"><h1>Ganaste!🏅</h1></div>
+      <div id="losing-message" class="hiddenLossing"><h1>Perdiste!💀</h1></div>
       <div id="correct-letters" class="row" ></div>
-
-      </div>
     </div>
+    
   </body>
 </html>
